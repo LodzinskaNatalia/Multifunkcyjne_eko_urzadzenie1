@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>マルチ機能エコ装置</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    body {
+        background-color: beige;
+        font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        overflow-x: hidden;
+    }
+    header {
+        margin-bottom: 2%;
+        background-image: url(Liscie.jpg);
+        background-size: cover;
+        height: 25vh;
+        padding: 1rem 5rem;
+        box-shadow: 0 0 40px 15px rgba(50, 90, 20, 0.3);
+        border-radius: 20px;
+        position: relative;
+    }
+    h1 {
+        margin-left: 25%;
+        font-family: 'Georgia', serif;
+        font-weight: 700;
+        font-size: 4rem;
+        color: #d7ffb7;
+        text-shadow: 5px 5px 10px rgb(23, 85, 0);
+        text-transform: uppercase;
+        user-select: none;
+    }
+    nav {
+        position: absolute;
+        top: 50px; /* moved down */
+        left: 20px;
+    }
+    details summary {
+        list-style: none;
+        cursor: pointer;
+        font-size: 50px;
+        text-shadow: 5px 5px 10px rgb(23, 85, 0);
+    }
+    details[open] summary::after {
+        content: "";
+    }
+    details ul {
+        padding: 6px;
+        margin: 8px 0 0;
+        list-style: none;
+        background: white;
+        border-radius: 10px;
+        border: 1px solid #eee;
+        width: 100px;
+    }
+    details ul li a {
+        display: block;
+        padding: 5px 12px;
+        text-decoration: none;
+        color: #333;
+        border-radius: 6px;
+        transition: background 0.15s, color 0.15s;
+        font-size: 0.9em; /* slightly bigger links */
+    }
+    details ul li a:hover {
+        background: #f2f2f2;
+        color: #000;
+    }
+    main {
+        padding: 2% 0; /* full width, remove side margins */
+        position: relative;
+        font-size: 1.2em; /* bigger letters */
+        line-height: 1.6em;
+        width: 100%;
+        margin-top: 10%;
+    }
+    h3 {
+        font-family: 'Poppins', sans-serif;
+        text-shadow: 1px 1px 2px #a4a4a4;
+        text-transform: uppercase;
+        font-style: italic;
+        font-weight: bold;
+        font-size: 1.4em;
+        margin: 20px;
+    }
+    p, ol li {
+        margin: 0.5em 0;
+        padding: 3% 5%;
+    }
+    ol {
+        margin: 1em 0;
+        padding-left: 2%;
+        list-style-position: inside;
+    }
+    footer {
+        margin-top: 2%;
+        background-color: lightgreen;
+        padding: 2%;
+        box-shadow: 0 0 20px 15px rgb(189, 227, 160);
+        letter-spacing: 0.5px;
+        font-size: 0.9em;
+        font-style: italic;
+        text-align: center;
+    }
+    .video-wrapper {
+        position: relative;
+        width: 100%;
+        padding-bottom: 56.25%;
+        margin: 2em 0;
+        border-radius: 12px;
+        overflow: hidden;
+    }
+    .video-wrapper iframe, .video-wrapper img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border: 0;
+    }
+    .video-wrapper .play-button {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 72px;
+        height: 72px;
+        background: white;
+        clip-path: polygon(25% 20%, 25% 80%, 75% 50%);
+        cursor: pointer;
+        box-shadow: 0 0 8px rgba(0,0,0,0.5);
+    }
+    @media(max-width: 600px) {
+        header {padding: 1rem;}
+        h1 {font-size: 2.5rem;}
+        details summary {font-size: 36px;}
+        main {font-size: 1em;}
+        .video-wrapper .play-button {width: 50px; height: 50px;}
+    }
+</style>
+</head>
+<body>
+<header>
+    <h1>マルチ機能エコデバイス</h1>
+    <nav>
+        <details>
+            <summary>🌍</summary>
+            <ul>
+                <li><a href="index.html">Polski</a></li>
+                <li><a href="english.html">English</a></li>
+                <li><a href="spanish.html" lang="es">Español</a></li>
+                <li><a href="russian.html" lang="ru">Русский</a></li>
+                <li><a href="german.html">Deutsch</a></li>
+            </ul>
+        </details>
+    </nav>
+</header>
+
+<main>
+<h3>説明</h3>
+<p>私たちは, 二つの役に立つ環境に優しい装置のプロトタイプを作り、これを「マルチ機能エコデバイス」と名付けました。これは Arduino の技術に基づいていて、サーモスタットのような役割をします。</p>
+<p>その一は、太陽光パネルのエネルギーだけを使うので、より良いサーモスタットになります。</p>
+<p>その二は、登山やアウトドアの旅などで役立つ、旅行用のライフセーバーのような装置です。小型で、温度が低すぎる時にはヒーティングプレートを作動させ、温度が高すぎる時には冷却システムを作動させるようになっています。</p>
+<p>私たちのプロトタイプは、加熱にはPTCヒーティングプレートを、冷却にはファンを使います。温度は様々な用途に合わせて調整できますが、私たちの装置では、２５℃以上冷却が、２３℃以下で加熱が作動します。</p>
+
+<div class="video-wrapper">
+    <a href="https://www.youtube.com/watch?v=hzgFY-X1EOc" target="_blank" rel="noopener noreferrer">
+        <img src="https://img.youtube.com/vi/hzgFY-X1EOc/maxresdefault.jpg" alt="Watch video">
+        <div class="play-button"></div>
+    </a>
+</div>
+
+<ol>
+<h3>私たちは、何がうまくいったか、そして何を改善できるかについて分析を行いました。というのも、これは利用できる資源の関係で、まだプロトタイプだけだからです。</h3>
+<li>結果として、私たちが持っているモバイルバッテリーだけでは十分な電力を供給できず、そのため装置はゆっくりと動作してしまいました（動画では早送りされています）。そのため、9Vバッテリーを追加せざるを得ませんでした。その上、冷却時にはファンが多くの電力を必要とするから、画面に温度が表示されなくなります。もしこのプロトタイプを市場に出すなら、こんな小さなモバイルバッテリーより多くの電力を供給できる太陽光パネルを使わないといけません。</li>
+<li>ファン（3.5V）とヒーティングプレートでは、温度に大きな影響を与えるほどの出力がありません。</li>
+<li>機器は持ち運ぶにはあまりにも壊れやすいことが分かったので、このウェブサイトには動画が掲載されています。その上、プログラマーは装置でテストできなかったため、正しくコードを書くのに問題がありました。しかし、技師はこれを直すことができました。装置をより頑丈にするには、はんだ付けする必要です。また、旅行用のライフセーバーとして使うなら、しっかりしたケースを追加することも必要です。</li>
+</ol>
+<p>まとめると、これはまだプロトタイプだけですが、より大きな規模で使うにはどこを改善すればいいかは分かっています。</p>
+</main>
+
+<footer>
+    &#xA9; この装置はナタリア・ウォジンスカ、ヴェロニカ・ティタエワ、アドリアン・ヴウォダルスキによって作られました。
+</footer>
+</body>
+</html>

@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+<title>DME</title>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    body {
+        background-color: beige;
+        font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        overflow-x: hidden;
+    }
+    header {
+        margin-bottom: 2%;
+        background-image: url(Liscie.jpg);
+        background-size: cover;
+        height: 25vh;
+        padding: 1rem 5rem;
+        box-shadow: 0 0 40px 15px rgba(50, 90, 20, 0.3);
+        border-radius: 20px;
+        position: relative;
+    }
+    h1 {
+        margin-left: 25%;
+        font-family: 'Georgia', serif;
+        font-weight: 700;
+        font-size: 4rem;
+        color: #d7ffb7;
+        text-shadow: 5px 5px 10px rgb(23, 85, 0);
+        text-transform: uppercase;
+        user-select: none;
+    }
+    nav {
+        position: absolute;
+        top: 50px; /* moved down */
+        left: 20px;
+    }
+    details summary {
+        list-style: none;
+        cursor: pointer;
+        font-size: 50px;
+        text-shadow: 5px 5px 10px rgb(23, 85, 0);
+    }
+    details[open] summary::after {
+        content: "";
+    }
+    details ul {
+        padding: 6px;
+        margin: 8px 0 0;
+        list-style: none;
+        background: white;
+        border-radius: 10px;
+        border: 1px solid #eee;
+        width: 100px;
+    }
+    details ul li a {
+        display: block;
+        padding: 5px 12px;
+        text-decoration: none;
+        color: #333;
+        border-radius: 6px;
+        transition: background 0.15s, color 0.15s;
+        font-size: 0.9em; /* slightly bigger links */
+    }
+    details ul li a:hover {
+        background: #f2f2f2;
+        color: #000;
+    }
+    main {
+        padding: 2% 0; /* full width, remove side margins */
+        position: relative;
+        font-size: 1.2em; /* bigger letters */
+        line-height: 1.6em;
+        width: 100%;
+        margin-top: 10%;
+    }
+    h3 {
+        font-family: 'Poppins', sans-serif;
+        text-shadow: 1px 1px 2px #a4a4a4;
+        text-transform: uppercase;
+        font-style: italic;
+        font-weight: bold;
+        font-size: 1.4em;
+        margin: 20px;
+    }
+    p, ol li {
+        margin: 0.5em 0;
+        padding: 3% 5%;
+    }
+    ol {
+        margin: 1em 0;
+        padding-left: 2%;
+        list-style-position: inside;
+    }
+    footer {
+        margin-top: 2%;
+        background-color: lightgreen;
+        padding: 2%;
+        box-shadow: 0 0 20px 15px rgb(189, 227, 160);
+        letter-spacing: 0.5px;
+        font-size: 0.9em;
+        font-style: italic;
+        text-align: center;
+    }
+    .video-wrapper {
+        position: relative;
+        width: 100%;
+        padding-bottom: 56.25%;
+        margin: 2em 0;
+        border-radius: 12px;
+        overflow: hidden;
+    }
+    .video-wrapper iframe, .video-wrapper img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border: 0;
+    }
+    .video-wrapper .play-button {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 72px;
+        height: 72px;
+        background: white;
+        clip-path: polygon(25% 20%, 25% 80%, 75% 50%);
+        cursor: pointer;
+        box-shadow: 0 0 8px rgba(0,0,0,0.5);
+    }
+    @media(max-width: 600px) {
+        header {padding: 1rem;}
+        h1 {font-size: 2rem;}
+        details summary {font-size: 36px;}
+        main {font-size: 1em;}
+        .video-wrapper .play-button {width: 50px; height: 50px;}
+    }
+</style>
+</head>
+<body>
+    <header>
+        <h1>Dispositivo multi- función ecológico</h1>
+        <nav>
+            <details>
+                <summary>🌍</summary>
+                <ul>
+                    <li><a href="index.html">Polski</a></li>
+                    <li><a href="english.html">English</a></li>
+                    <li><a href="russian.html"><span lang="ru">Русский</span></a></li>
+                    <li><a href="german.html">Deutsch</a></li>
+                    <li><a href="japanese.html"><span lang="ja">日本語</span></a></li>
+                </ul>
+            </details>
+        </nav>
+    </header>
+
+    <main>
+        <h3>Descripción:</h3>
+        <p>Hemos construido un prototipo de dos dispositivos útiles y ecológicos. Los hemos bautizado como «Dispositivo Ecológico Multifuncional». Se basa en la tecnología Arduino y cumple una función similar a la de un termostato. El primer dispositivo pretende ser un termostato mejorado, ya que obtiene energía únicamente de paneles fotovoltaicos. El segundo, por su parte, pretende ser un salvavidas para turistas, que puede resultar útil durante una excursión a la montaña. Debería ser de tamaño reducido y activar la placa calefactora cuando la temperatura sea demasiado baja y el sistema de refrigeración cuando sea demasiado alta. Nuestro prototipo utiliza una placa PTC para calentar y un ventilador para enfriar. La temperatura se puede ajustar según las diferentes necesidades, pero en nuestro caso el enfriamiento se activa a una temperatura ≥ 25 °C y la calefacción a ≤ 23 °C.</p>
+
+        <div class="video-wrapper">
+            <a href="https://www.youtube.com/watch?v=hzgFY-X1EOc" target="_blank" rel="noopener noreferrer"></a>
+            <img src="https://img.youtube.com/vi/hzgFY-X1EOc/maxresdefault.jpg" alt="Watch video">
+            <div>▶</div>
+        </div>
+
+        <h3>Análisis del prototipo:</h3>
+        <ol>
+            <li>Resultó que el powerbank que teníamos no era suficiente para proporcionar la energía necesaria, por lo que el dispositivo funcionaba muy lentamente (en el vídeo se muestra una versión acelerada). Nos vimos obligados a añadir una pila de 9 V. Además, durante la refrigeración, el ventilador consume demasiada energía, por lo que la temperatura no se muestra en la pantalla. Si este prototipo saliera al mercado, habría que utilizar un panel solar, que proporcionaría mucha más potencia que el powerbank.</li>
+            <li>El ventilador (3,5 voltios) y la placa calefactora tienen muy poca potencia como para influir de manera significativa en la temperatura. Se necesitarían aparatos más potentes, a los que no tenemos acceso.</li>
+            <li>El equipo resultó ser demasiado delicado para transportarlo, por lo que se ha publicado un vídeo en la página web. Esto también causó problemas para que el programador escribiera un código que funcionara correctamente, ya que no podía probarlo en el dispositivo; sin embargo, el ingeniero logró solucionarlo. Para que el dispositivo fuera más duradero, habría que soldarlo, y para que sirviera como salvavidas para turistas, habría que añadirle una carcasa resistente.</li>
+        </ol>
+
+        <p>En resumen, se trata solo de un prototipo, pero sabemos qué habría que mejorar para que funcionara a mayor escala.</p>
+    </main>
+
+    <footer>
+        &#xA9; El dispositivo y la página web han sido creados por Natalia Lodzińska, Veronika Titaeva y Adrian Włodarski.
+    </footer>
+</body>
+</html>
